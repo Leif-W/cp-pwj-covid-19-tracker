@@ -1,0 +1,33 @@
+{
+  "name": "cp-pwj-covid-19-tracker",
+  "version": "0.0.1",
+  "description": "Clever Programmer - Profit with JavaScript - COVID-19 Tracker",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "node util/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Leif-W/cp-pwj-covid-19-tracker.git"
+  },
+  "keywords": [
+    "COVID",
+    "COVID-19",
+    "COVID",
+    "Tracker",
+    "COVID-19",
+    "Tracker",
+    "SARS-COV-2",
+    "SARS-COV-2",
+    "Tracker"
+  ],
+  "author": "Leif Westerlind",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Leif-W/cp-pwj-covid-19-tracker/issues"
+  },
+  "homepage": "https://github.com/Leif-W/cp-pwj-covid-19-tracker#readme"
+}

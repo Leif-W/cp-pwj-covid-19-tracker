@@ -1,0 +1,11 @@
+# draw.io backup files
+~$*.bkp
+
+# dotenv - keep API keys secret
+.env
+
+# Node.js modules managed by npm
+node_modules
+
+# Build location for Distribution
+dist
