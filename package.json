@@ -7,10 +7,16 @@
     "doc": "docs"
   },
   "scripts": {
-    "dev": "next",
+    "clean": "node util/clean.js",
+    "tidy": "node util/tidy.js",
     "check-env": "node util/check-env.js",
-    "build": "next build",
-    "start": "next start",
+    "dev": "next",
+    "prebuild": "npm run clean",
+    "build": "npm run check-env && next build",
+    "postbuild": "npm run tidy",
+    "prestart": "npm run clean",
+    "start": "npm run check-env && next start",
+    "poststart": "npm run tidy",
     "test": "node util/test.js"
   },
   "repository": {
