@@ -9,3 +9,9 @@ node_modules
 
 # Build location for Distribution
 dist
+
+# Miscellaneous backup files
+*.bak
+
+# vim swap files
+*.swp
