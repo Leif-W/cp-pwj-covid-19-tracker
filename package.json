@@ -8,6 +8,7 @@
   },
   "scripts": {
     "dev": "next",
+    "check-env": "node util/check-env.js",
     "build": "next build",
     "start": "next start",
     "test": "node util/test.js"
