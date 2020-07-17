@@ -25,7 +25,7 @@
 23. [ ] Mock up the desktop version
 24. [ ] Make the design continuously responsive to browser resizes
 25. [ ] Mock up the Google Maps
-26. [ ] Wait, wasn't there supposed to be a search function?
-27. [ ] Better check Specifications doc
-28. [ ] Oh right, didn't write it yet
-29. [ ] See 2. above
+27. [ ] Static Site Generation
+28. [ ] Netlify, Firebase, Heroku, other host
+29. [ ] Continuous deployment via webhook trigger to rebuild or pull from Github
+30. [ ] Release v1.0.0 by deadline 2020-07-19@15:00:00 EST Sunday (ish)
