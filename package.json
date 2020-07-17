@@ -7,6 +7,9 @@
     "doc": "docs"
   },
   "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
     "test": "node util/test.js"
   },
   "repository": {
@@ -22,12 +25,22 @@
     "Tracker",
     "SARS-COV-2",
     "SARS-COV-2",
-    "Tracker"
+    "Tracker",
+    "Clever Programmer",
+    "CleverProgrammer",
+    "Profit with JavaScript",
+    "PWJ"
   ],
   "author": "Leif Westerlind",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Leif-W/cp-pwj-covid-19-tracker/issues"
   },
-  "homepage": "https://github.com/Leif-W/cp-pwj-covid-19-tracker#readme"
+  "homepage": "https://github.com/Leif-W/cp-pwj-covid-19-tracker#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "next": "^9.4.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
 }
