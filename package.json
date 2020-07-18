@@ -10,13 +10,15 @@
     "clean": "node util/clean.js",
     "tidy": "node util/tidy.js",
     "check-env": "node util/check-env.js",
+    "predev": "npx next telemetry disable",
     "dev": "next",
-    "prebuild": "npm run clean",
+    "prebuild": "npm run clean & npx next telemetry disable",
     "build": "npm run check-env && next build",
     "postbuild": "npm run tidy",
-    "prestart": "npm run clean",
+    "prestart": "npm run clean && npx next telemetry disable",
     "start": "npm run check-env && next start",
     "poststart": "npm run tidy",
+    "preexport": "npx next telemetry disable",
     "test": "node util/test.js"
   },
   "repository": {
