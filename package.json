@@ -13,10 +13,10 @@
     "predev": "npx next telemetry disable",
     "dev": "next",
     "prebuild": "npm run clean & npx next telemetry disable",
-    "build": "npm run check-env && next build",
+    "build": "npm run check-env && npx next build",
     "postbuild": "npm run tidy",
     "prestart": "npm run clean && npx next telemetry disable",
-    "start": "npm run check-env && next start",
+    "start": "npm run check-env && npx next start",
     "poststart": "npm run tidy",
     "preexport": "npx next telemetry disable",
     "test": "node util/test.js"
