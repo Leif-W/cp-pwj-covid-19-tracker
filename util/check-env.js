@@ -1,12 +1,12 @@
 'use strict';
 
-import { existsSync, writeFileSync } from 'fs';
+const fs = require('fs');
 const path = '.env';
 const news_api_regexp = /^[a-f0-9]{32}$/;
 let error_flag = false;
 let error_msg = '';
 
-if (existsSync(path)) {
+if (fs.existsSync(path)) {
 	console.log(`Found ${path}`);
 	return 0;
 } else if (process.env.GOOGLE_MAPS_JAVASCRIPT_API_KEY == undefined) {
@@ -22,7 +22,7 @@ if (existsSync(path)) {
 	console.error(`Error: NEWS_API_KEY contains invalid characters.`);
 	return 1;
 } else {
-	writeFileSync(path,
+	fs.writeFileSync(path,
 		`NEWS_API_KEY=${process.env.NEWS_API_KEY}\n` +
 		`GOOGLE_MAPS_JAVASCRIPT_API_KEY=${process.env.GOOGLE_MAPS_JAVASCRIPT_API_KEY}\n`
 	);

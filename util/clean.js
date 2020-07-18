@@ -1,4 +1,4 @@
 'use strict';
 
-import { remove } from 'fs-extra';
-remove('dist');
+const fse = require('fs-extra');
+fse.remove('dist');
