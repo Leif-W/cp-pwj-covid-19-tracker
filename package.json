@@ -1,7 +1,6 @@
 {
   "name": "cp-pwj-covid-19-tracker",
   "version": "0.0.1",
-  "type": "module",
   "description": "Clever Programmer - Profit with JavaScript - COVID-19 Tracker",
   "main": "index.js",
   "directories": {
