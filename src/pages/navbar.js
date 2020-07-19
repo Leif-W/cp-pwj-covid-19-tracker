@@ -1,12 +1,11 @@
-
 'use strict';
 
-import React from 'react';
+import Link from 'next/link';
 
 const NavBar = () => {
 	return (
 		<nav>
-			<a href="/">Index</a> | <a href="/news">News</a> | <a href="/about">About</a>
+			<Link href="/"><a>Index</a></Link> | <Link href="/news"><a>News</a></Link> | <Link href="/about"><a>About</a></Link>
 		</nav>
 	);
 };
