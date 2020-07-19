@@ -7,18 +7,9 @@
     "doc": "docs"
   },
   "scripts": {
-    "clean": "node util/clean.js",
-    "tidy": "node util/tidy.js",
-    "check-env": "node util/check-env.js",
-    "predev": "npx next telemetry disable",
     "dev": "next",
-    "prebuild": "npm run clean & npx next telemetry disable",
-    "build": "npm run check-env && npx next build",
-    "postbuild": "npm run tidy",
-    "prestart": "npm run clean && npx next telemetry disable",
-    "start": "npm run check-env && npx next start",
-    "poststart": "npm run tidy",
-    "preexport": "npx next telemetry disable",
+    "build": "px next build",
+    "start": "npx next start",
     "test": "node util/test.js"
   },
   "repository": {
@@ -50,8 +41,6 @@
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
     "axios": "^0.19.2",
-    "dotenv": "^8.2.0",
-    "fs-extra": "^9.0.1",
     "next": "^9.4.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
