@@ -1,6 +1,23 @@
 'use strict';
 
-import NavBar from './navbar';
+const NavBar = () => {
+	return (
+		<nav>
+			<Link href="/"><a>Index</a></Link> | <Link href="/news"><a>News</a></Link> | <Link href="/about"><a>About</a></Link>
+		</nav>
+	);
+};
+
+const Index = () => {
+	return (
+		<div>
+			<NavBar />
+			<div>
+				Welcome!
+			</div>
+		</div>
+	);
+};
 
 const News = ({ posts }) => {
 	return (
@@ -15,8 +32,7 @@ const News = ({ posts }) => {
 	);
 };
 
-
-export const getStaticProps = async () => {
+const getStaticProps = async () => {
 	//const res = await fetch('https://.../posts')
 	//const posts = await res.json()
 
@@ -45,4 +61,11 @@ export const getStaticProps = async () => {
 	};
 };
 
-export default News;
+const About = () => {
+	return (
+		<div>
+			<NavBar />
+			<div>About</div>
+		</div>
+	);
+};

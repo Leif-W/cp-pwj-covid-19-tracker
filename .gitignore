@@ -2,34 +2,13 @@
 
 # dependencies
 node_modules
-/node_modules
-.pnp
-/.pnp
-.pnp.js
-/.pnp.js
-
-# testing
-/coverage
-coverage
-
-# next.js
-/.next/
-.next
-/out/
-out
 
 # production build or distribution
-/build
 build
-/dist
 dist
 
 # Environment
 .env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
 
 # draw.io backup files
 ~$*.bkp
