@@ -1,7 +1,17 @@
 'use strict';
 
+import React from 'react';
+import NavBar from './navbar';
+
 const HomePage = () => {
-	return <div>Welcome to Next.js!</div>;
+	return (
+		<div>
+			<NavBar />
+			<div>
+				Welcome!
+			</div>
+		</div>
+	);
 };
 
 export default HomePage;
