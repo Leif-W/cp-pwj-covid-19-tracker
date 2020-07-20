@@ -1,0 +1,331 @@
+/***************  BEGIN - INIT  ***************/
+* {
+	margin: 0;
+	border: 0;
+	padding: 0;
+    background-color: #333;
+    color: #fff;
+}
+
+a:link {
+	text-decoration: none;
+}
+
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:active {
+	text-decoration: underline;
+}
+
+.hide {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+	transition: opacity 1s ease-in-out;
+}
+
+.show {
+    opacity: 1;
+    height: calc(var(--vh, 1vh) * 100);
+}
+/***************  END - INIT  ***************/
+
+
+/***************  BEGIN - SPLASH  ***************/
+#splash {
+	background-color: #933;
+	display: flex;
+    width: 100vw;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#splash__title {
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+
+#splash__subtitle {
+	font-size: 1rem;
+	font-weight: 500;
+}
+
+#splash__subsubtitle {
+	font-size: 0.5rem;
+	font-weight: 400;
+}
+
+@media screen and (min-width: 400px) {
+	#splash__title {
+		font-size: 3rem;
+		font-weight: 700;
+	}
+
+	#splash__subtitle {
+		font-size: 2rem;
+		font-weight: 500;
+	}
+
+	#splash__subsubtitle {
+		font-size: 1rem;
+		font-weight: 400;
+	}
+}
+
+@media screen and (min-width: 800px) {
+	#splash__title {
+		font-size: 6rem;
+		font-weight: 700;
+	}
+
+	#splash__subtitle {
+		font-size: 4rem;
+		font-weight: 500;
+	}
+
+	#splash__subsubtitle {
+		font-size: 2rem;
+		font-weight: 400;
+	}
+}
+/***************  END - SPLASH  ***************/
+
+
+/***************  BEGIN - NAV  ***************/
+#nav {
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    float: right;
+    align-items: center;
+    width: 5vh;
+    padding: 0.3vh 0.2vh;
+    position: absolute;
+    top: 0.5vh;
+    right: 0.5vh;
+}
+
+#nav__bar_1, #nav__bar_2, #nav__bar_3 {
+    width: 3.25vh;
+    height: 0.1vh;
+    background-color: #fff;
+}
+/***************  END - NAV  ***************/
+
+
+/***************  BEGIN - MENU  ***************/
+#menu {
+	background-color: #333;
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+#menu__maps {
+    background-color: #339;
+    height: 15vh;
+    width: 40vw;
+    border-radius: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 8vw;
+    margin-right: 3vw;
+}
+
+#menu__charts {
+    background-color: #393;
+    height: 15vh;
+    width: 40vw;
+    border-radius: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 8vw;
+    margin-left: 3vw;
+}
+
+#menu__countries {
+    background-color: #993;
+    height: 15vh;
+    width: 40vw;
+    border-radius: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0vw 3vw;
+}
+
+#menu__news {
+    background-color: #963;
+    height: 15vh;
+    width: 40vw;
+    border-radius: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0vw 3vw;
+}
+
+#menu__symptoms {
+    background-color: #933;
+    height: 15vh;
+    width: 40vw;
+    border-radius: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0vw 3vw;
+}
+
+#menu__prevention {
+    background-color: #939;
+    height: 15vh;
+    width: 40vw;
+    border-radius: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0vw 3vw;
+}
+
+#menu__about {
+    background-color: #666;
+    height: 15vh;
+    width: 40vw;
+    border-radius: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0vw 3vw;
+}
+/***************  END - MENU  ***************/
+
+
+/***************  BEGIN - MAPS  ***************/
+#maps {
+	background-color: #339;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#maps__title {
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+/***************  END - MAPS  ***************/
+
+
+/***************  BEGIN - CHARTS  ***************/
+#charts {
+	background-color: #393;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#charts__title {
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+/***************  END - CHARTS  ***************/
+
+
+/***************  BEGIN - COUNTRIES  ***************/
+#countries {
+	background-color: #993;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#countries__title {
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+/***************  END - COUNTRIES  ***************/
+
+
+/***************  BEGIN - NEWS  ***************/
+#news {
+	background-color: #963;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#news__title {
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+/***************  END - NEWS  ***************/
+
+
+/***************  BEGIN - SYMPTOMS  ***************/
+#symptoms {
+	background-color: #933;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#symptoms__title {
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+/***************  END - SYMPTOMS  ***************/
+
+
+/***************  BEGIN - PREVENTION  ***************/
+#prevention {
+	background-color: #939;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#prevention__title {
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+/***************  END - PREVENTION  ***************/
+
+
+/***************  BEGIN - ABOUT  ***************/
+#about {
+	background-color: #666;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#about__title {
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+/***************  END - ABOUT  ***************/

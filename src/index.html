@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Clever Programmer - Profit with JavaScript - COVID 19 Tracker</title>
+	<link href="index.css" rel="stylesheet">
+	<script src="index.js"></script>
+</head>
+
+<body>
+	<div id="root">
+		<div id="splash" class="hide" onclick="hideSplash(); showMaps();">
+			<div id="splash__title">COVID-19 Tracker</div>
+			<div id="splash__subtitle">&#x00A9;&#xFE0F; 2020 Leif Westerlind</div>
+			<div id="splash__subsubtitle"><a href="">Clever Programmer - Profit with JavaScript</a></div>
+		</div>
+		<button id="nav" class="hide" onclick="showMenu()">
+			<div id="nav__bar_1"></div>
+			<div id="nav__bar_2"></div>
+			<div id="nav__bar_3"></div>
+		</button>
+		<div id="menu" class="hide">
+			<div id="menu__maps" onclick="hideMenu(); showMaps();">Maps</div>
+			<div id="menu__charts" onclick="hideMenu(); showCharts();">Charts</div>
+			<div id="menu__countries" onclick="hideMenu(); showCountries();">Countries</div>
+			<div id="menu__news" onclick="hideMenu(); showNews();">News</div>
+			<div id="menu__symptoms" onclick="hideMenu(); showSymptoms();">Symptoms</div>
+			<div id="menu__prevention" onclick="hideMenu(); showPrevention();">Prevention</div>
+			<div id="menu__about" onclick="hideMenu(); showAbout();">About</div>
+		</div>
+		<div id="maps" class="hide">
+			<div id="maps__title">Maps</div>
+		</div>
+		<div id="charts" class="hide">
+			<div id="charts__title">Charts</div>
+		</div>
+		<div id="countries" class="hide">
+			<div id="countries__title">Countries</div>
+		</div>
+		<div id="news" class="hide">
+			<div id="news__title">News</div>
+		</div>
+		<div id="symptoms" class="hide">
+			<div id="symptoms__title">Symptoms</div>
+		</div>
+		<div id="prevention" class="hide">
+			<div id="prevention__title">Prevention</div>
+		</div>
+		<div id="about" class="hide">
+			<div id="about__title">About</div>
+		</div>
+	</div>
+</body>
+
+</html>
