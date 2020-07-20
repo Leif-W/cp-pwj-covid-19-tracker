@@ -4,7 +4,7 @@
 2. [x] Wireframe
 3. [x] Get API keys
 4. [ ] Static Site Generation
-5. [ ] Mobile first design
+5. [x] Mobile first design
 6. [ ] Splash page - (Search page?)
 7. [ ] Map page - Google Maps - Customizable Theme - Search feature - Location Cards
 8. [ ] Menu button
