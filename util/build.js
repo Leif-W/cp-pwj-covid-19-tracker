@@ -17,8 +17,9 @@ const fse = require('fs-extra');
 let STATIC_SRC_DIR = 'src',
     DATA_SRC_DIR = 'data',
     BUILD_DIR = 'build',
-    COVID19_API_URL = 'https://disease.sh/v3/covid-19/countries?yesterday=true&allowNull=true', // -H accept: application/json;
-	NEWS_API_URL = `https://newsapi.org/v2/top-headlines?country=${ country }&pageSize=5&apiKey=${ process.env.NEWS_API_KEY }`;
+    COVID19_API_URL = 'https://disease.sh/v3/covid-19/countries?yesterday=true&allowNull=true',     // -H accept: application/json;
+    NEWS_API_URL = 'data/news.json';
+    //NEWS_API_URL = `https://newsapi.org/v2/top-headlines?country=${ country }&pageSize=5&apiKey=${ process.env.NEWS_API_KEY }`;
 ////////////////  END - INIT  ////////////////
 
 
@@ -55,7 +56,7 @@ const buildFilter = (src, dst) => {
 	return status;
 };
 
-fse.copySync(SRC_DIR, BUILD_DIR, {
+fse.copySync(STATIC_SRC_DIR, BUILD_DIR, {
 	preserveTimestamps: true,
 	filter: buildFilter,
 });
@@ -63,44 +64,44 @@ fse.copySync(SRC_DIR, BUILD_DIR, {
 
 
 ////////////////  BEGIN - FETCH DATA  ////////////////
-const fetchData = (api_url, json_file) => {
-	let json_stat,
-		status,
-		date_now = new Date();
+const fetchData = (api_url, json_file, json_data = {}) => {
+    let json_stat,
+        status,
+        date_now = new Date();
 
-	console.log(date_now);
-	date_now.setMinutes(date_now.getMinutes() - 10);
-	console.log(date_now);
- 
+    console.log(`Now : ${date_now.valueOf()}`);
+    date_now.setMinutes(date_now.getMinutes() - 10);
+    console.log(`-10m: ${date_now.valueOf()}`);
 
-	try {
-		json_stat = fse.statSync(json_file);
-	} catch (err) {
-		json_stat = undefined;
-	}
+    try {
+        json_stat = fse.statSync(json_file);
+    } catch (err) {
+        //json_stat = undefined;
+        fse.ensureFileSync(json_file);
+        fse.writeJsonSync(json_file, json_data);
+        json_stat = fse.statSync(json_file);
+    }
 
-	if (json_stat && json_stat.isFile) {
-
-
-		if ((Now - json_stat.mtime) > 10 minutes) {
-			status = true;
-		} else {
-			status = false;
-		}
-	} else {
-		status = true;
-	}
-
-	fetch(url)
-		.then(res => res.json())
-		.then(json => {
-        fse.writeJsonSync('build/poop.json', { toilet: 'flush' });
-        //fs.writeJsonSync('build/test.json', json)
-    })
-		.then(() => {
-			console.log(json);
-		})
-		.catch(err => console.error(err));
+    if (json_stat && json_stat.isFile) {
+        console.log( date_now - json_stat.mtime);
+        if ((date_now - json_stat.mtime) > 10 * 60 * 1000) {
+            status = true;
+        } else {
+            status = false;
+        }
+    } else {
+        status = true;
+    }
+/*
+    fetch(url)
+        .then(res => res.json())
+        .then(json => {
+            fse.writeJsonSync('build/poop.json', { toilet: 'flush' });
+            //fs.writeJsonSync('build/test.json', json)
+        }).then(() => {
+            console.log(json);
+        }).catch(err => console.error(err));
+*/
 };
 
 // API - COVID-19 - NEWS
@@ -121,6 +122,7 @@ const getNews = async country => {
     }
 };
 
+fetchData( '', 'data/poop.json', { toilet: 'flush' } );
 ////////////////  END - FETCH DATA  ////////////////
 
 
