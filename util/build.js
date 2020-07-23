@@ -67,6 +67,7 @@ fse.copySync(STATIC_SRC_DIR, BUILD_DIR, {
 const fetchData = (api_url, json_file, json_data = {}) => {
     let json_stat,
         status,
+        cache_max_age = 10 * 60 * 1000, // 10m
         date_now = new Date();
 
     console.log(`Now : ${date_now.valueOf()}`);
@@ -84,7 +85,7 @@ const fetchData = (api_url, json_file, json_data = {}) => {
 
     if (json_stat && json_stat.isFile) {
         console.log( date_now - json_stat.mtime);
-        if ((date_now - json_stat.mtime) > 10 * 60 * 1000) {
+        if ((date_now - json_stat.mtime) > cache_max_age) {
             status = true;
         } else {
             status = false;
