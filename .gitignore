@@ -3,26 +3,26 @@
 # dependencies
 node_modules
 
-# production build or distribution
+# production
 build
-dist
+data
 
-# Environment
+# environment
 .env
 
 # draw.io backup files
 ~$*.bkp
-
-# Mac nonsense
-.DS_Store
-
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
 
 # Miscellaneous backup files
 *.bak
 
 # vim swap files
 *.swp
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Mac nonsense
+.DS_Store
