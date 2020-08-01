@@ -320,25 +320,23 @@ a:active {
 #about {
 	background-color: #666;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
 
 @media screen and (min-width: 400px) {
 	#about__title {
-		flex-direction: column;
 		font-size: 3rem;
 		font-weight: 700;
 	}
 
 	#about__subtitle {
-		flex-direction: column;
 		font-size: 2rem;
 		font-weight: 500;
 	}
 
 	#about__subsubtitle {
-		flex-direction: column;
 		font-size: 1rem;
 		font-weight: 400;
 	}
@@ -346,19 +344,16 @@ a:active {
 
 @media screen and (min-width: 800px) {
 	#about__title {
-		flex-direction: column;
 		font-size: 6rem;
 		font-weight: 700;
 	}
 
 	#about__subtitle {
-		flex-direction: column;
 		font-size: 4rem;
 		font-weight: 500;
 	}
 
 	#about__subsubtitle {
-		flex-direction: column;
 		font-size: 2rem;
 		font-weight: 400;
 	}
